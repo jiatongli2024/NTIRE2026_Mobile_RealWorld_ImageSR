@@ -9,18 +9,21 @@ The challenge is part of the 11th NTIRE Workshop at CVPR 2026, which targets t
 
 The evaluation consists of comparing the restored high-resolution images with the ground truth high-resolution images. To comprehensively assess the results, we employ evaluation metrics as follows:  
 
-- **Inference Speed:** We will benchmark the inference speed on the **MediaTek Dimensity 8400** platform, using the inference speed of **OSEDiff** on this platform as the baseline. The input image size is $128\times 128$, and the ouput size is $512\times 512$. We define $t_{osediff}$ and $t_{cur\_model}$ as the average inference time on single image using OSEDiff and current model, and the definition of speedup ratio is:
+- **Inference Speed:** We will benchmark the inference speed on the **MediaTek Dimensity 8400** platform, using the inference speed of **OSEDiff** on this platform as the baseline. The input image size is $128\times 128$, and the ouput size is $512\times 512$. We define $t_{osediff}$ and $t_{curmodel}$ as the average inference time on single image using OSEDiff and current model, and the definition of speedup ratio is:
+
 $$
-Speedup=\frac{t_{osediff}}{t_{cur\_model}}
+Speedup=\frac{t_{osediff}}{t_{curmodel}}
 $$
 
 
 - **Perceptual Metrics:** **LPIPS**, **DISTS**, **NIQE**, **ManIQA**, **MUSIQ**, and **CLIP-IQA**. To measure the super-resolution performance, we calculate the average weighted value of the six perceptual metrics. The input image size is arbitrary. The Score is defined as follows:
+
 $$
 \text{Score} = \left(1 - \text{LPIPS}\right) + \left(1 - \text{DISTS}\right) + \text{CLIPIQA} + \text{MANIQA} + \frac{\text{MUSIQ}}{100} + \max\left(0, \frac{10 - \text{NIQE}}{10}\right)
 $$
 
 The final score of each participant is defined as follows:
+
 $$
 FinalScore=2^{Score}\cdot {Speedup}^{0.756}
 $$
