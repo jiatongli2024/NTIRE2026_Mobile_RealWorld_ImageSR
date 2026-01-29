@@ -33,6 +33,8 @@ We provide a reference **pip** installation list in [requirements.txt](./require
 
 In addition, we provide a list of operators supported on the **MediaTek Dimensity 8400** platform. When designing models, participants should avoid using unsupported operators; otherwise, the code may fail to run, resulting in an unqualified submission.
 
+As a reference, both the [Stable-Diffusion-2.1-base](https://huggingface.co/Manojb/stable-diffusion-2-1-base) and the [Stable-Diffusion-3](https://huggingface.co/stabilityai/stable-diffusion-3-medium) can run successfully on this platform.
+
 ![alt text](figs/opts.PNG)
 
 ## Reference Code
