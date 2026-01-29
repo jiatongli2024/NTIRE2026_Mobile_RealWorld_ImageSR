@@ -25,7 +25,7 @@ $$
 The final score of each participant is defined as follows:
 
 $$
-FinalScore=2^{Score}\cdot {Speedup}^{0.756}
+FinalScore=2^{Score}\cdot {Speedup}^{0.2}
 $$
 
 ## Develop Environments
