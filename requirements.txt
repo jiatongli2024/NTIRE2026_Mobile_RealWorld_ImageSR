@@ -6,3 +6,17 @@ torchaudio<=2.5.1
 torchvision<=0.20.1
 numpy<=1.26.4
 diffusers<=0.34.0
+opencv-python
+pyyaml
+scikit-learn
+scipy
+tensorboard
+timm
+tqdm
+bcolz-zipline
+prettytable
+menpo
+mxnet
+einops
+lmdb
+yapf
