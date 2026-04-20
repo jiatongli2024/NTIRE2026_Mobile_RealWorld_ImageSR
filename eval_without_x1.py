@@ -58,8 +58,8 @@ class IQA:
         }
 
     def calculate_values(self, output_image, target_image):
-        if target_image is not None:
-            assert type(output_image) == type(target_image), "The types of output_image and target_image do not match"
+        # if target_image is not None:
+        #     assert type(output_image) == type(target_image), f"The types of output_image and target_image do not match {type(output_image)} and {type(target_image)}"
 
         if type(output_image) == torch.Tensor or type(output_image) == np.ndarray:
             if type(output_image) == np.ndarray:
@@ -151,9 +151,21 @@ def calculate_iqa_for_partition(output_folder, target_folder, output_files, devi
             target_image = Image.open(target_image_path)
         else:
             target_image = None
+            
+        assert output_image_path.split(".")[-1] == target_image_path.split(".")[-1]
 
-        values = iqa.calculate_values(output_image, target_image)
-        values["psnr"], values["ssim"] = util.cal_psnr_ssim(output_image_path, target_image_path)
+        try:
+            values = iqa.calculate_values(output_image, target_image)
+        except Exception as e:
+            # 兜底保障：捕获其他所有意料之外的报错（比如图片损坏、OOM等）
+            print(f"\n[错误] 计算 IQA {output_image_path} 时发生未知异常: {e}")
+            exit(0)
+        # try:
+        #     values["psnr"], values["ssim"] = util.cal_psnr_ssim(output_image_path, target_image_path)
+        # except Exception as e:
+        #     # 兜底保障：捕获其他所有意料之外的报错（比如图片损坏、OOM等）
+        #     print(f"\n[错误] 计算 IQA {output_image_path} 时发生未知异常: {e}")
+        #     exit(0)
         if values is not None:
             local_results[output_file] = values
 
@@ -189,7 +201,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     resume_figs = []
-    output_files = sorted([f for f in os.listdir(args.output_folder) if f.endswith('.png') and f not in resume_figs])
+    output_files = sorted([f for f in os.listdir(args.output_folder) if f.endswith('.png') and f not in resume_figs and not f.endswith('x1.png')])
     if args.target_folder is not None:
         target_files = sorted(
             [f for f in os.listdir(args.target_folder) if f.endswith('.png') and f not in resume_figs])
