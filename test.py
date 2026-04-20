@@ -47,6 +47,11 @@ def select_model(args, device):
         name = f"{model_id:02}_Super03"
         model_path = os.path.join('model_zoo', 'team08_Super03', 'team08_Super03.pkl')
         model_func = Super03
+    elif model_id == 9:
+        from models.team09_SNOWVision import main as SNOWVision
+        name = f"{model_id:02}_SNOWVision"
+        model_path = os.path.join('model_zoo', 'team09_SNOWVision', 'best.pth')
+        model_func = SNOWVision
     elif model_id == 10:
         from models.team10_ACM_HCC import main as ACM_HCC
         name = f"{model_id:02}_ACM_HCC"
