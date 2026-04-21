@@ -2,6 +2,7 @@
 
 [![ntire](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2Fzhengchen1999%2FNTIRE2025_ImageSR_x4%2Fmain%2Ffigs%2Fdiamond_badge.json)](https://www.cvlai.net/ntire/2026/)
 [![page](https://img.shields.io/badge/Project-Page-blue?logo=github&logoSvg)](https://gobunu.github.io/ntire_mobile_sr)
+[![arXiv](https://img.shields.io/badge/Report-arXiv-red?logo=arxiv&logoSvg)](https://arxiv.org/abs/2604.17306)
 [![visitors](https://visitor-badge.laobi.icu/badge?page_id=jiatongli2024.NTIRE2026_Mobile_RealWorld_ImageSR&right_color=violet)](https://github.com/jiatongli2024/NTIRE2026_Mobile_RealWorld_ImageSR)
 [![GitHub Stars](https://img.shields.io/github/stars/jiatongli2024/NTIRE2026_Mobile_RealWorld_ImageSR?style=social)](https://github.com/jiatongli2024/NTIRE2026_Mobile_RealWorld_ImageSR)
 [![supp](https://img.shields.io/badge/Supplementary-Paper-orange.svg)](https://github.com/jiatongli2024/NTIRE2026_Mobile_RealWorld_ImageSR/releases/tag/v1)
