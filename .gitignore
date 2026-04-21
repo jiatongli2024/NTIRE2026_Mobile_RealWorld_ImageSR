@@ -4,7 +4,8 @@ scoring*
 OSEDiff
 pretrained
 recieved_results
-results
+results/*
+!figs/results.png
 model_zoo
 eval_without_x1
 val.zip
@@ -223,4 +224,4 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-*.png
+
