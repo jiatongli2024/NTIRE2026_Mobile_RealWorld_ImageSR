@@ -42,7 +42,7 @@ $$
 ## Certificates
 The top three teams in this competition have been awarded NTIRE 2026 award certificates. 
 
-All certificates can be downloaded from [Google Drive](https://drive.google.com/file/d/1WtiHavX98hpgpzW_nsVVw0544ejQmzoU/view?usp=sharing).
+All certificates can be downloaded from [Google Drive](https://drive.google.com/file/d/1exduTHhqQqvVXm-J6ae-QPqRBwIAiImv/view?usp=sharing).
 
 
 ## How to test the model?
